@@ -1,7 +1,15 @@
 'use strict';
 
 chrome.runtime.onInstalled.addListener(function (details) {
-	console.log('previousVersion', details.previousVersion);
+	chrome.storage.sync.clear();
+	//console.log('previousVersion', details.previousVersion);
 });
 
-console.log('\'Allo \'Allo! Event Page');
+chrome.browserAction.setBadgeText({
+	text: '0'
+});
+
+chrome.extension.onConnect.addListener(function (port) {
+	port.onMessage.addListener(function (msg) {
+	});
+});

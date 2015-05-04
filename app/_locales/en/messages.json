@@ -1,10 +1,10 @@
 {
   "appName": {
-    "message": "chrome repeatty",
+    "message": "repeatty",
     "description": "The name of the application"
   },
   "appDescription": {
-    "message": "Small Extension that helps repeating any international words or phrases",
+    "message": "My Chrome Extension",
     "description": "The description of the application"
   }
 }
