@@ -1,0 +1,27 @@
+# ide and os files
+/.idea/
+**/*.DS_Store
+**/*.kate-swp
+**/*.desktop
+**/*.thumb
+**/*.sublime*
+**/.~*
+**/~*
+**/*~
+*.orig
+.sass-cache
+
+# package managers
+/npm-debug.log
+/node_modules
+app/bower_components
+test/bower_components
+
+# compile files
+/.tmp
+/temp
+/dist
+/package
+
+#other
+/lib-cov
