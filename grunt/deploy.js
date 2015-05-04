@@ -1,29 +1,29 @@
-"use strict";
+'use strict';
 
-module.exports = function (grunt, options) {
+module.exports = function (grunt, CFG) {
 
 	this
 		.include([
 			'install',
 			'build',
-			'build/minify',
+			'minify'
 		])
 
 		.compress({
 			options: {
-				archive: function() {
-					var manifest = grunt.file.readJSON(options.BUILD + '/manifest.json');
-					return options.DEPLOY + '/need-water-extension-' + manifest.version + '.zip';
+				archive: function () {
+					var manifest = grunt.file.readJSON(CFG.BUILD + '/manifest.json');
+
+					return CFG.DEPLOY + '/need-water-extension-' + manifest.version + '.zip';
 				}
 			},
 			files: [{
 				expand: true,
-				cwd: this.BUILD + '/',
+				cwd: CFG.BUILD + '/',
 				src: [
 					'**'
 				],
 				dest: ''
 			}]
-		})
-	;
+		});
 };

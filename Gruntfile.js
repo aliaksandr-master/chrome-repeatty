@@ -5,6 +5,7 @@ module.exports = require('grunto')(function (grunt) {
 	this.context({
 		CWD: __dirname,
 		SRC: 'app',
+		GRUNT: 'grunt',
 		DEPLOY: 'package',
 		BUILD: 'dist'
 	});
@@ -19,14 +20,6 @@ module.exports = require('grunto')(function (grunt) {
 	}]);
 
 	return {
-		autoprefixer: {
-			options: {
-				browsers: [ 'last 2 version' ],
-				diff: false,
-				map: false
-			}
-		},
-
 		watch: {
 			options: {
 				interrupt: true,

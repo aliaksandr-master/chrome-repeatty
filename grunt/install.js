@@ -1,6 +1,6 @@
-"use strict";
+'use strict';
 
-module.exports = function (grunt, options) {
+module.exports = function (grunt, CFG) {
 
 	this.bower({
 		options: {
@@ -11,6 +11,5 @@ module.exports = function (grunt, options) {
 			cleanBowerDir: false,
 			bowerOptions: {}
 		}
-	})
-
+	});
 };

@@ -1,32 +1,32 @@
-"use strict";
+'use strict';
 
-module.exports = function (grunt, options) {
+module.exports = function (grunt, CFG) {
 
 	this
 		.uglify({
 			files: [{
 				expand: true,
-				cwd: this.BUILD + '/scripts',
+				cwd: CFG.BUILD + '/scripts',
 				src: '**/*.js',
-				dest: this.BUILD + '/scripts/'
+				dest: CFG.BUILD + '/scripts/'
 			}]
 		})
 
 		.imagemin({
 			files: [{
 				expand: true,
-				cwd: this.BUILD + '/images',
+				cwd: CFG.BUILD + '/images',
 				src: '**/*.{gif,jpeg,jpg,png}',
-				dest: this.BUILD + '/images'
+				dest: CFG.BUILD + '/images'
 			}]
 		})
 
 		.svgmin({
 			files: [{
 				expand: true,
-				cwd: this.BUILD + '/images',
+				cwd: CFG.BUILD + '/images',
 				src: '**/*.svg',
-				dest: this.BUILD + '/images'
+				dest: CFG.BUILD + '/images'
 			}]
 		})
 
@@ -43,9 +43,9 @@ module.exports = function (grunt, options) {
 			},
 			files: [{
 				expand: true,
-				cwd: this.BUILD,
+				cwd: CFG.BUILD,
 				src: '*.html',
-				dest: this.BUILD
+				dest: CFG.BUILD
 			}]
 		})
 	;

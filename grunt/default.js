@@ -1,6 +1,6 @@
-"use strict";
+'use strict';
 
-module.exports = function (grunt, options) {
+module.exports = function (grunt, CFG) {
 
 	this.include([
 		'install',
@@ -9,12 +9,12 @@ module.exports = function (grunt, options) {
 
 	this.watch({
 		files: [
-			this.SRC + '/**/*',
-			'!' + this.SRC + '/manifest.json'
+			CFG.SRC + '/**/*',
+			'!' + CFG.SRC + '/manifest.json'
 		],
 		tasks: [
 			'install',
 			'build'
 		]
-	})
+	});
 };
